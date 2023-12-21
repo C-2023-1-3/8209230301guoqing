@@ -1,20 +1,23 @@
 #include<iostream>
 using namespace std;
 class Point {
-private:int x, y;
+private:int x=60, y=80;
 public:
-	void setPoint(int, int);
+	void setPoint();
 	void display();
 };
-void Point::setPoint(int i, int j) {
+void Point::setPoint() {
+	int i, j;
+	cout << "请输入i,j:";
+	cin >> i >> j;
 	x= 60 + i;
 	y= 80 + j;
 }
 void Point::display() {
-	cout << '(' << x << ',' << y << ')' << endl;
+	cout << "修改后的坐标为：" << '(' << x << ',' << y << ')' << endl;
 }
 int main() {
 	Point a;
-	a.setPoint(60,80);
+	a.setPoint();
 	a.display();
 }
